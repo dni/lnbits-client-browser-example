@@ -4,7 +4,7 @@
   "description": "Example of using the LNbits Javascript Client",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -p 8080",
+    "start": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/dni/lnbits-client-browser-example/issues"
   },
-  "homepage": "https://github.com/dni/lnbits-client-browser-example#readme"
+  "homepage": "https://github.com/dni/lnbits-client-browser-example#readme",
+  "dependencies": {
+    "vite": "^4.4.2"
+  }
 }

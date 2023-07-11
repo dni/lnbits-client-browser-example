@@ -1,8 +1,9 @@
-import LnbitsClient from '@lnbits/client-browser';
+import * as LnbitsClient from '@lnbits/client-browser';
 
 let key = "15dbed9c69eb498a8bb7db6d2b527d59";
 let api_url = "https://legend.lnbits.com";
 
+console.log(LnbitsClient);
 let defaultClient = LnbitsClient.ApiClient.instance;
 defaultClient.basePath = api_url;
 
