@@ -1,0 +1,25 @@
+{
+  "name": "lnbits-client-browser-example",
+  "version": "1.0.0",
+  "description": "Example of using the LNbits Javascript Client",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "LNbits",
+    "SDK",
+    "Api Client"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dni/lnbits-client-browser-example.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dni/lnbits-client-browser-example/issues"
+  },
+  "homepage": "https://github.com/dni/lnbits-client-browser-example#readme"
+}
