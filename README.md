@@ -7,7 +7,12 @@ $ cd lnbits-client-browser-example
 $ npm i
 ```
 
-## run example on local server
+## run example in browser
 ```console
 $ npm run start
+```
+
+## run example in nodejs
+```console
+$ node node.js
 ```
