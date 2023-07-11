@@ -1,22 +1,24 @@
-import * as LnbitsClient from '@lnbits/client-browser';
+import * as lnbits from '@lnbits/client-browser';
 
 let key = "15dbed9c69eb498a8bb7db6d2b527d59";
 let api_url = "https://legend.lnbits.com";
 
-console.log(LnbitsClient);
-let defaultClient = LnbitsClient.ApiClient.instance;
-defaultClient.basePath = api_url;
+console.log("lnbits import", lnbits);
 
-// Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
-APIKeyHeader.apiKey = key;
+let config = new lnbits.Configuration({
+    basePath: api_url,
+    apiKey: key,
+})
 
-const request_handler = (fn, err_msg) => {
-    return (error, data, res) => {
-        if (error) {
-            console.error(err_msg, error.status, error.message, res.text);
-        } else {
-            fn(data);
-        }
-    };
-};
+let api = new lnbits.CoreApi(config)
+console.log("CoreApi", api);
+
+api.tinyurlApiV1TinyurlPost({url: "https://600.wtf"}).then(data => {
+    console.log("create a tinyurl", data);
+    api.tinyurlApiV1TinyurlTinyurlIdGet({tinyurlId: data.id}).then(data => {
+        console.log("get a tinyurl", data);
+        api.tinyurlApiV1TinyurlTinyurlIdDelete({tinyurlId: data.id}).then(data => {
+            console.log("delete a tinyurl", data);
+        })
+    })
+})
